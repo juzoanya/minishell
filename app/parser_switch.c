@@ -6,7 +6,7 @@
 /*   By: juzoanya <juzoanya@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/21 20:44:29 by euyi              #+#    #+#             */
-/*   Updated: 2022/09/10 19:09:27 by juzoanya         ###   ########.fr       */
+/*   Updated: 2022/09/13 12:47:42 by juzoanya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ static void	parser_switch_2(t_mini *shell)
 	shell->cmd = NULL;
 	if (!access("heredoc", F_OK))
 		unlink("heredoc");
+	if (!access("ex_", F_OK))
+		unlink("ex_");
 }
 
 // ******************************************************
@@ -68,6 +70,8 @@ void	parser_switch(t_mini *shell, int flag)
 		segment_cmd(shell->cmd, tmp, 0);
 		free(tmp);
 	}
+	if (!access("ex_", F_OK))
+		unlink("ex_");
 	if (!flag)
 		parser_switch_2(shell);
 }
@@ -108,7 +112,8 @@ void	shell_env_switch(t_mini *shell, char **envp)
 	{
 		while (shell->envp && shell->envp[i] && (free(shell->envp[i]), 1))
 			i++;
-		free(shell->envp);
+		if (shell->envp)
+			free(shell->envp);
 	}
 }
 

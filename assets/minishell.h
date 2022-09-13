@@ -6,7 +6,7 @@
 /*   By: juzoanya <juzoanya@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 17:33:32 by euyi              #+#    #+#             */
-/*   Updated: 2022/09/12 12:31:03 by juzoanya         ###   ########.fr       */
+/*   Updated: 2022/09/13 12:46:45 by juzoanya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ typedef struct s_mini
 	int			exec_type_flag;
 	int			pipe_fd[DEF_PIPE_CNT][2];
 	int			exit;
+	//int			exit_status;
 }				t_mini;
 
 // Functions in "libft_tools.c"

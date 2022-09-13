@@ -6,7 +6,7 @@
 /*   By: juzoanya <juzoanya@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 17:03:32 by euyi              #+#    #+#             */
-/*   Updated: 2022/09/10 21:18:35 by juzoanya         ###   ########.fr       */
+/*   Updated: 2022/09/13 12:39:48 by juzoanya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -139,16 +139,16 @@ int	call_run_cd(t_mini *shell)
 //This is just a sample of how run_ functions/plugin will look like
 void	run_cd(t_mini *shell)
 {
-	int	i;
+	//int	i;
 
-	i = -1;
+	//i = -1;
 	if (shell->exec_type_flag == 2 && !ft_memcmp(shell->exec_args[0], "cd\0", 3))
 	{
 		if (count_args(shell->exec_args) > 2)
 		{
 			printf("cd: too many arguments\n");
-			while (shell->exec_args[++i] != NULL)
-				printf("%s\n", shell->exec_args[i]);
+			//while (shell->exec_args[++i] != NULL)
+			//	printf("%s\n", shell->exec_args[i]);
 			g_exit_status = 1;
 			return ;
 		}

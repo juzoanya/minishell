@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: juzoanya <juzoanya@student.42wolfsburg.    +#+  +:+       +#+         #
+#    By: euyi <euyi@student.42wolfsburg.de>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/06 14:58:05 by euyi              #+#    #+#              #
-#    Updated: 2022/09/12 12:29:22 by juzoanya         ###   ########.fr        #
+#    Updated: 2022/09/12 16:15:19 by euyi             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = minishell
 
 SRC = app/main.c	app/parser_switch.c	app/run_plugins.c	\
 	assets/libft_tools.c	assets/libft_tools_2.c	assets/libft_tools_3.c	\
-	assets/run_plugins_utils.c	assets/parser_switch_utils.c	assets/utilities.c	\
+	assets/run_plugins_utils.c	assets/parser_switch_utils.c	\
 	plugins/0-ready_stdin.c	plugins/ready_stdout.c	\
 	plugins/1-dollar_processor.c	\
 	plugins/2-check_exec_type.c	\
@@ -24,7 +24,7 @@ SRC = app/main.c	app/parser_switch.c	app/run_plugins.c	\
 	plugins_assets/0-ready_stdin_utils.c	plugins_assets/check_exec_type_utils.c	\
 	plugins_assets/dollar_processor_utils.c	plugins_assets/cd_utils.c	\
 	plugins_assets/cd_utils_2.c	plugins_assets/export_unset_env_utils.c	\
-	plugins_assets/run_execve_utils.c	plugins_assets/miscellaneous.c
+	plugins_assets/run_execve_utils.c	plugins_assets/utilities.c
 
 OBJ = $(subst .c,.o,$(SRC))
 
